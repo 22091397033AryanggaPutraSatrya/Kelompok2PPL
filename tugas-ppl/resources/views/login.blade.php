@@ -23,7 +23,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="username" class="form-label">username</label>
-                            <input type="text" name="username" class="form-control" id="username" placeholder="name@example.com" required>
+                            <input type="text" name="username" class="form-control" id="username" placeholder="username" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
@@ -32,6 +32,7 @@
                         <div class="mb-3">
                             <div class="d-grid">
                                 <button class="btn btn-primary">Login</button>
+                                <p>Don't have account? <a href="/register">Register here</a>.</p>
                             </div>
                         </div>
                     </form>

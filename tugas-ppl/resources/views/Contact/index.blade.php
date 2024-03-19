@@ -7,7 +7,7 @@
     </div>
     <div class="input-group mb-3 mt-3">
         <input type="text" class="form-control" placeholder="Search">
-        <button type="search" class="btn btn-primary" href="{{ route('Contact.create') }}" >Search</button>
+        <button type="search" class="btn btn-primary" href="" >Search</button>
     </div>
     <hr />
     @if(Session::has('success'))

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AddressesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
@@ -12,7 +11,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/product', ProductController::class);
 Route::resource('/addresses', AddressesController::class)->names([
     'index' => 'addresses.index',
     'store' => 'addresses.store', // Menambahkan nama rute untuk aksi 'store'
@@ -39,5 +37,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/update-profile', [AuthController::class, 'updateProfile'])->name('update.profile');
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
-
-
