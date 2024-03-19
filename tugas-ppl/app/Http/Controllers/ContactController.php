@@ -7,9 +7,14 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $Contact = Contact::all(); 
+        if($request-> has('search')) {
+            $Contact = Contact::where('first_name', 'LIKE', '%' .$request->search. '%')->paginate(5);
+        } else {
+            $Contact = Contact::all(); 
+        }
+       
         return view('Contact.index', compact('Contact')); 
     }
 

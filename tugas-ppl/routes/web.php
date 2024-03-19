@@ -37,3 +37,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/update-profile', [AuthController::class, 'updateProfile'])->name('update.profile');
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
+

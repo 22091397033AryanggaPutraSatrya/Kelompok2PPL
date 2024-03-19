@@ -5,10 +5,12 @@
         <h1 class="mb-0">List Contact</h1>
         <a href="{{ route('Contact.create') }}" class="btn btn-primary">Add Contact</a>
     </div>
-    <div class="input-group mb-3 mt-3">
-        <input type="text" class="form-control" placeholder="Search">
-        <button type="search" class="btn btn-primary" href="" >Search</button>
-    </div>
+    <form action="/Contact">
+        <div class="input-group mb-3 mt-3">
+            <input type="search" name="search" class="form-control" placeholder="Search">
+            <button type="search" class="btn btn-primary">Search</button>
+        </div>
+    </form>
     <hr />
     @if(Session::has('success'))
         <div class="alert alert-success" role="alert">

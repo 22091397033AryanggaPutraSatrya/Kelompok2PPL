@@ -36,8 +36,8 @@
                         <div class="mb-3">
                             <div class="d-grid">
                                 <button class="btn btn-primary">Register</button>
-                                <p>Already have account? <a href="/login">Login here</a>.</p>
                             </div>
+                            <p>Already have account? <a href="/login">Login here</a>.</p>
                         </div>
                     </form>
                 </div>
